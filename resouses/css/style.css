@@ -1,0 +1,176 @@
+/* Dollor Green: #85bb65*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body{
+    background-color: #fff;
+    color: 555;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    width: 100%;
+    text-rendering: optimizeLegibility;
+}
+
+body{
+    background-image:linear-gradient(rgba(229, 228, 228, 0.76),rgba(229, 228, 228, 0.87)), url(img/currency-backgroung.png);
+}
+
+.row{
+    width: 84%;
+    margin: 0 auto;
+}
+
+.float-right{
+    float: right;
+}
+
+.float-left{
+    float: left;
+}
+
+.clearfix{ zoom: 1}
+.clearfix:after{
+    display: block;
+    height:0;
+    content: ' ';
+    clear: both;
+    
+}
+
+h1{
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 260%;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    color: rgba(0, 39, 255, 0.81);
+    
+}
+
+h2{
+    font-size: 150%;
+    font-weight: 300;
+    text-align: left;
+    word-spacing: 3px;
+    letter-spacing: 0.6px;
+}
+
+h3{
+    font-size: 130%;
+    font-weight: 600;
+    word-spacing: 2px;
+    letter-spacing: 0.4px;
+    margin-top: 15px;
+}
+
+table{
+    border-collapse: collapse;
+    text-align: center;
+    margin: 15px auto 0 auto;
+}
+
+thead{
+    background-color: rgba(133, 187, 101, 0.7);
+}
+
+tbody{
+    background-color: rgb(243, 255, 241)
+}
+
+td, th{
+    border: 1px solid black;
+    padding: 2px 5px;
+}
+
+th{
+    font-weight: 500;
+}
+
+td{
+    
+    font-size:90%;;
+}
+
+/*---------------------------------------*/
+/*---------------HEADER------------------*/
+/*---------------------------------------*/
+header{
+    background-color: #85bb65;
+}
+
+#sub-heading{
+    font-size: 105%
+}
+
+.money-tree{
+    text-align: right;
+    height: 100%;
+    vertical-align: center;
+}
+.money-tree img{
+    width: 350px;
+    height: auto;
+}
+
+.main-heading-box{
+    float: left;
+    width:60%;
+    padding-top: 6.25%;
+    padding-bottom: 1%;
+}
+
+.main-heading-box p{
+    margin-top: 0.5%;
+}
+
+/*------------------------------------------*/
+/*----------Section introduction------------*/
+/*------------------------------------------*/
+section{
+    padding-top: 30px;
+    /*background-color: #f8f8f8;*/
+}
+
+section:nth-of-type(2n+1){
+    
+}
+
+.container-text{
+    width:70%;
+    margin: 0 auto;
+}
+
+section p{
+    margin-top: 10px;
+    font-size: 100%;
+    line-height: 1.4;
+}
+
+section p:first-of-type{
+    margin-top: 7px;
+}
+
+.description{
+    margin: 2px 0 0 0;
+    font-size: 80%;
+    font-weight: 700;
+    text-align: center;
+}
+
+.container-img{
+    text-align: center;
+}
+
+.container-img img{
+    width: 70%;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+
