@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Unit Converter</title>
+
+		<link rel="stylesheet" type="text/css" href="resource/css/style.css">
+	</head>
+	<body>
+		<h1>Unit Converter</h1>
+		<div class="clearflix outerbox">
+			<div class="box">
+				<label for="unit-1"><h2>Select Unit-1</h2></label>
+				<select>
+					<option value="">Unit-1</option>
+					<option value="kg">Kilogram(kg)</option>
+					<option value="gram">Gram(g)</option>
+				</select>
+				<br>
+				<label for="unit-1-value"></label>
+				<input type="number" id="unit-1-value" required>
+				<br>
+				<div class="unit-relation">
+					1u1 = n u2
+				</div>
+			</div>
+			<div class="box">
+				<label for="u2"><h2>Select Unit 2</h2></label>
+				<select id="unit-2">
+					<option value="">Unit-2</option>
+					<option value="kg">Kilogram(kg)</option>
+					<option value="gram">Gram(g)</option>
+				</select>
+				<br>
+				<label for="unit-2-value"></label>
+				<input type="number" id="unit-2-value" required>
+				<br>
+				<span class="unit-relation">
+					1u2 = n u1
+				</span>
+			</div>
+				<button>Convert</button>
+		</div>
+	</body>
+</html>
