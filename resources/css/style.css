@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/background.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+}
+
+h1 {
+    color: whitesmoke;
+    text-shadow: 2px 2px 2px black;
+    font-size: 2.5em;
+    font-weight: 400;
+    width: 80%;
+}
+
+h1::after {
+    padding-top: 5px;
+    display: block;
+    content: " ";
+    border-bottom:1px solid rgb(155, 155, 155);
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 2em;
+}
+
+.box {
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    height: 200px;
+    line-height: 200px;
+    vertical-align: middle;
+    margin:20px 1.66% 0 1.66%;
+    text-shadow: 1px 1px 1px #000000;
+}
+
+.blog,
+.unit-convertor {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-decoration: underline;
+    color: #3d3d3d;
+}
+
+.blog {
+    background-image: linear-gradient(to left top, rgba(255, 255, 255, 0.6),rgba(71, 71, 71, 0.6)), url(img/blog.jpg);
+}
+
+.unit-convertor {
+    background-image: linear-gradient(to left top, rgba(255, 255, 255, 0.6),rgba(71, 71, 71, 0.6)), url(img/unit-convertor.jpg);
+}
+
