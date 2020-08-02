@@ -1,2 +1,2 @@
 # portfolio.github.io
-Appliction of all the web skilled learned in the best possible way.
+Application of all the web skills learned in the best possible way and develop a great app.
