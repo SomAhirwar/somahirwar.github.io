@@ -1,0 +1,40 @@
+/*Small to large phones: 481px >= width >= 767px */
+@media only screen and (max-width: 767px) {
+
+    h1 {
+        text-align: center;
+    }
+
+    #sub-heading { text-align: center; }
+
+    .money-tree { text-align: center;}
+
+    .container-text { width: 80%; }
+
+    .main-heading-box {
+        width: 100%;
+        float: none;
+    }
+
+    .container-img img{
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+/*Small phones: 0>= widthh >=480px */
+@media only screen and (max-width: 480px) {
+
+    .container-text { width: 80%; }
+
+    .main-heading-box {
+        width: 100%;
+        float: none;
+    }
+
+    .container-img img{
+        width: 100%;
+        text-align: center;
+    }
+}
