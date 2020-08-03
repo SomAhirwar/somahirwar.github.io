@@ -165,6 +165,7 @@ section p:first-of-type{
 
 .container-img{
     text-align: center;
+    width: 100%;
 }
 
 .container-img img{

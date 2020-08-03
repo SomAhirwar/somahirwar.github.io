@@ -1,6 +1,7 @@
 /*Small to large phones: 481px >= width >= 767px */
 @media only screen and (max-width: 767px) {
 
+
     h1 {
         text-align: center;
     }
@@ -8,6 +9,8 @@
     #sub-heading { text-align: center; }
 
     .money-tree { text-align: center;}
+
+    .money-tree img { width: 100%; }
 
     .container-text { width: 80%; }
 
