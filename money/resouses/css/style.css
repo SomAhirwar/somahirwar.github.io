@@ -74,6 +74,8 @@ table{
     margin: 15px auto 0 auto;
 }
 
+.table { overflow-x: auto;}
+
 thead{
     background-color: rgba(133, 187, 101, 0.7);
 }
@@ -113,7 +115,7 @@ header{
     vertical-align: center;
 }
 .money-tree img{
-    width: 350px;
+    width: 30%;
     height: auto;
 }
 
