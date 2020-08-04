@@ -74,6 +74,8 @@ table{
     margin: 15px auto 0 auto;
 }
 
+.table { overflow-x: auto;}
+
 thead{
     background-color: rgba(133, 187, 101, 0.7);
 }
@@ -104,7 +106,7 @@ header{
 }
 
 #sub-heading{
-    font-size: 105%
+    font-size: 105%;
 }
 
 .money-tree{
@@ -113,7 +115,7 @@ header{
     vertical-align: center;
 }
 .money-tree img{
-    width: 350px;
+    width: 30%;
     height: auto;
 }
 
@@ -146,6 +148,7 @@ section:nth-of-type(2n+1){
 }
 
 section p{
+    text-align: justify;
     margin-top: 10px;
     font-size: 100%;
     line-height: 1.4;
@@ -164,6 +167,7 @@ section p:first-of-type{
 
 .container-img{
     text-align: center;
+    width: 100%;
 }
 
 .container-img img{
