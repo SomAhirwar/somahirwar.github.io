@@ -6,15 +6,25 @@
 
 html,body {
     height: 100vh;
-    background-image: url(img/background.jpg);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(img/background.jpg);
     background-repeat: no-repeat;    
     background-size: cover;
     background-position: center;
+    text-align: center;
+    font-family: Lato;
+    font-weight: 300;
 }
 
-h1,
+h1 {
+    padding-top: 30px;
+    font-size: 45px;
+    color: rgb(255, 0, 0);
+    font-weight: 600;
+}
+
 h2 {
-    color: rgb(70, 50, 255);
+    color: rgb(255, 255, 255);
+    font-size: 30px;
 }
 
 .clearflix {
@@ -24,14 +34,15 @@ h2 {
 .clearflix:before {
     content: " ";
     clear: both;
-    display:table;
+    display: table;
     height: 0;
 }
 
 .outerbox {
-    width: 50%;
+    width: 60%;
     background-color: rgba(0,0,0,0.6);
-    margin: 75px auto 0 auto;
+    margin: 40px auto 0 auto;
+    padding: 10px;
     text-align: center;
 }
 
@@ -40,7 +51,6 @@ h2 {
     float: left;
     width: 50%;
 }
-
 
 .box * {
     margin-top: 15px;
@@ -54,20 +64,81 @@ h2 {
     padding-bottom: 15px;
 }
 
-input, button {
-    height: 35px;
+select {
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 17px;
 }
 
-button {
-    margin-bottom: 15px;
+label {
+    padding: 15px 0px 15px 0px;
 }
+
+input {
+    height: 35px;
+    font-size: 20px;
+    width: 200px;
+    text-align: center;
+}
+
+.convert {
+    margin: 15px;
+    width: 120px;
+    height: 35px;
+    font-size: 22px;
+    font-weight: 100;
+    border-radius: 35px;
+    background-color: rgb(255, 136, 0);
+    border-color: rgb(255, 136, 0);
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+    padding: 2px;
+    color: white;
+}
+
+.convert:active,
+.convert:hover {
+    background-color: rgb(255, 208, 0);
+    border-color: rgb(255, 208, 0);
+    color: black;
+    cursor: pointer;
+}
+
+.interchange {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    display: block;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 600;;
+    top: 308px;
+    left: 47.1%;
+    background-color: purple;
+    color: white;
+    transition: background-color 0.2s, color 0.2s;
+    border-radius: 50%;
+    padding: 4px 0 0 0;
+}
+
+.interchange:hover,
+.interchange:active {
+    background-color: rgb(209, 83, 209);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+input:focus, button:focus { outline: none; }
 
 .unit-relation {
     display: inline-block;
     border: 1px solid black;
+    margin-top: 15px;
     height: 50px;
     line-height: 50px;
     width: 120px;
     background-color: #dcdcdb;
     vertical-align: middle;
+    font-size: 20px;
+    font-weight: 600;
+    font-style: italic;
 }
