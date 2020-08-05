@@ -118,7 +118,7 @@ input {
     color: white;
     transition: background-color 0.2s, color 0.2s;
     border-radius: 50%;
-    padding: 8px 0 0 0;
+    padding: 10px 0 0 0;
 }
 
 .interchange:hover,
