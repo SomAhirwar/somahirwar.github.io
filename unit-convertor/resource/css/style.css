@@ -107,17 +107,18 @@ input {
     width: 80px;
     height: 80px;
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 308px;
     display: block;
     text-align: center;
     font-size: 60px;
     font-weight: 600;
-    top: 308px;
-    left: 47.1%;
     background-color: purple;
     color: white;
     transition: background-color 0.2s, color 0.2s;
     border-radius: 50%;
-    padding: 4px 0 0 0;
+    padding: 8px 0 0 0;
 }
 
 .interchange:hover,
