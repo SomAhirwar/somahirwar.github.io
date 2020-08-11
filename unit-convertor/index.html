@@ -16,29 +16,40 @@
 			<br>
 			<div class="box">
 				<label for="unit-1"><h2>Select Unit 1</h2></label>
-				<select>
-					<!--<option value="">Unit-1</option>-->
-					<option value="kg" selected>Kilogram(kg)</option>
-					<option value="gram">Gram(g)</option>
+				<select id="unit-1">
+					<option value="kilog" selected>Kilogram(kg)</option>
+					<option value="g">Gram(g)</option>
+					<option value="decag">Decagram</option>
+					<option value="decig">Decigram</option>
+					<option value = "centig">Centigram</option>
+					<option value = "millig">Milligram(mg)</option>
+					<option value = "hectog">Hectogram</option>
+					<option value="microg">Microgram</option>
+
 				</select>
 				<br>
-				<input type="number" id="unit-1-value" placeholder="Value" required>
+				<input type="number" id="unit-1-value" placeholder="Value" step="0.001" required>
 				<br>
-				<div class="unit-relation">
+				<div class="unit-relation unit-1-to-2">
 					1 u1 = n u2
 				</div>
 			</div>
 			<div class="box">
 				<label for="u2"><h2>Select Unit 2</h2></label>
 				<select id="unit-2">
-					<!--<option value="">Unit-2</option>-->
-					<option value="kg">Kilogram(kg)</option>
-					<option value="gram" selected>Gram(g)</option>
+					<option value="g" selected>Gram(g)</option>
+					<option value="kilog">Kilogram(kg)</option>
+					<option value="decag">Decagram</option>
+					<option value="decig">Decigram</option>
+					<option value = "centig">Centigram</option>
+					<option value = "millig">Milligram(mg)</option>
+					<option value = "hectog">Hectogram</option>
+					<option value="microg">Microgram</option>
 				</select>
 				<br>
-				<input type="number" id="unit-2-value" placeholder="Converted Value">
+				<input type="number" id="unit-2-value" placeholder="Converted Value" step="0.001">
 				<br>
-				<span class="unit-relation">
+				<span class="unit-relation unit-2-to-1">
 					1 u2 = n u1
 				</span>
 			</div>
@@ -49,5 +60,6 @@
 			</strong></button>
 		</div>
 		<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+		<script src="resource/js/app.js"></script>
 	</body>
 </html>
