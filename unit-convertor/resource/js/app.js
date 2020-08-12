@@ -1,14 +1,14 @@
 var unitController = (function() {
     var unit = {
         weight: {
-            microg: 0.000001,
-            millig: 0.001,
-            centig: 0.01,
-            decig: 0.1,
-            g: 1,
-            decag: 10,
-            hectog: 100,
-            kilog:1000
+            microgram: 0.000001,
+            milligram: 0.001,
+            centigram: 0.01,
+            decigram: 0.1,
+            gram: 1,
+            decagram: 10,
+            hectogram: 100,
+            kilogram:1000
         }
     };
     return {
@@ -45,6 +45,10 @@ var UIController = (function() {
             var u1,u2;
             document.getElementById(DOMString.value2).value = value2;
             document.getElementById(DOMString.value2).style.backgroundColor="rgba(200,200,200,0.7)";
+        },
+        updateUnitRelation: function(u1,u2, value1, value2, selector) {
+            var relation = value2/value1;
+            document.querySelector(selector).textContent = '1 ' + u1 + ' = ' + relation + ' ' + u2;
         }
     };
 })();
@@ -58,17 +62,44 @@ var controller = (function(unitCtrl, UICtrl) {
         input = UICtrl.getInput();
         //console.log(input);
         //2. Convert u1 to u2
-        value2 = unitCtrl.convertUnit(input.u1, input.u2, input.value1);
-        //3. Update UI
-        UICtrl.updateValue2(value2);
+        if(!isNaN(input.value1) && input.value1 != 0)
+        {
+            value2 = unitCtrl.convertUnit(input.u1, input.u2, input.value1);
+            //3. Update UI
+            UICtrl.updateValue2(value2);
+    
+            //4. Updating unit relation
+            UICtrl.updateUnitRelation(input.u1, input.u2, input.value1, value2, DOM.unitRealtionOneToTwo);
+            UICtrl.updateUnitRelation(input.u2, input.u1, value2, input.value1, DOM.unitRealtionTwotoOne);
+
+        }
     }
 
     var swap = function() {
-        var u1, u2;
+        var u1, u2, value1, value2, temp;
         u1= document.getElementById(DOM.u1).value;
         u2= document.getElementById(DOM.u2).value;
-        document.getElementById(DOM.u1).value = u2;
-        document.getElementById(DOM.u2).value = u1;
+
+        //Swaping value of u1 and u2;
+        temp = u1;
+        u1=u2;
+        u2=temp;
+        document.getElementById(DOM.u1).value = u1;
+        document.getElementById(DOM.u2).value = u2;
+        value1 = parseFloat(document.getElementById(DOM.value1).value);
+
+        if(!isNaN(value1) && value1!=0){
+            //Convert unit2 to unit1
+            value2 = unitCtrl.convertUnit(u1,u2, value1);
+            UICtrl.updateValue2(value2);
+        }
+
+            //4. Updating unit relation
+            /*UICtrl.updateUnitRelation(u1, u2, value1, value2, DOM.unitRealtionOneToTwo);
+            UICtrl.updateUnitRelation(u2, u1, value2, value1, DOM.unitRealtionTwotoOne);*/
+            temp = document.querySelector(DOM.unitRealtionOneToTwo).textContent;
+            document.querySelector(DOM.unitRealtionOneToTwo).textContent = document.querySelector(DOM.unitRealtionTwotoOne).textContent;
+            document.querySelector(DOM.unitRealtionTwotoOne).textContent = temp;        
     }
 
     var setupEventListener = function() {

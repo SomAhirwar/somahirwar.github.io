@@ -133,13 +133,10 @@ input:focus, button:focus { outline: none; }
 .unit-relation {
     display: inline-block;
     border: 1px solid black;
-    margin-top: 15px;
-    height: 50px;
-    line-height: 50px;
-    width: 120px;
+    margin-top: 20px;
     background-color: #dcdcdb;
-    vertical-align: middle;
     font-size: 20px;
     font-weight: 600;
     font-style: italic;
+    padding:10px;
 }
