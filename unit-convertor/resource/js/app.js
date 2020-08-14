@@ -115,10 +115,11 @@ var controller = (function(unitCtrl, UICtrl) {
         document.getElementById(DOM.u1).value = u1;
         document.getElementById(DOM.u2).value = u2;
         value1 = parseFloat(document.getElementById(DOM.value1).value);
+        unitType = document.getElementById(DOM.unitType).value;
 
         if(!isNaN(value1) && value1!=0){
             //Convert unit2 to unit1
-            value2 = unitCtrl.convertUnit(u1,u2, value1);
+            value2 = unitCtrl.convertUnit(unitType,u1,u2, value1);
             UICtrl.updateValue2(value2);
         }
 
@@ -130,6 +131,7 @@ var controller = (function(unitCtrl, UICtrl) {
 
 
     var setupEventListener = function() {
+        var options;
         document.querySelector(DOM.convertBtn).addEventListener('click', convert);
         document.addEventListener('keypress', function(event) {
             if(event.keyCode === 13 || event.which === 13) {
@@ -137,8 +139,15 @@ var controller = (function(unitCtrl, UICtrl) {
             }
         });
         document.querySelector(DOM.swapBtn).addEventListener('click', swap);
-        document.getElementById(DOM.unitType).addEventListener('click', (e) => {
-                UICtrl.unitTypeList(e.target.value);
+
+        //Event Listner to update Unit-type List
+        options = document.querySelectorAll('#' + DOM.unitType + '  option');
+        options = Array.prototype.slice.call(options);
+        options.forEach(element => {
+                element.addEventListener('click', (e) => {
+                    console.log(e);
+                    UICtrl.unitTypeList(e.target.value);
+                });
         });
     };
     return {
