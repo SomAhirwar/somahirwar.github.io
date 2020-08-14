@@ -138,9 +138,7 @@ var controller = (function(unitCtrl, UICtrl) {
         });
         document.querySelector(DOM.swapBtn).addEventListener('click', swap);
         document.getElementById(DOM.unitType).addEventListener('click', (e) => {
-            if(e.target.nodeName === 'OPTION') {
                 UICtrl.unitTypeList(e.target.value);
-            }
         });
     };
     return {
