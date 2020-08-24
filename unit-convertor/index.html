@@ -10,7 +10,7 @@
 		<div class="clearflix outerbox">
 			<label for="unit-type"><h2>Select Unit Type</h2></label>
 			<br>
-			<select id="unit-type">
+			<select id="unit-type" onchange="UIController.populate()">
 				<option value="weight" selected>Weight</option>
 				<option value="length">Length</option>
 			</select>

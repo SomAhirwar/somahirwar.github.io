@@ -63,20 +63,32 @@ var UIController = (function() {
             console.log(unit);
             document.querySelector(selector).textContent = '1 ' + u1 + ' = ' + relation + ' ' + u2;
         },
-        unitTypeList: function(unitType) {
-            var HTML;
-            switch (unitType) {
-                case 'weight':
-                    HTML = '<option value="kilogram" selected>Kilogram(kg)</option><option value="gram">Gram(g)</option><option value="decagram">Decagram</option><option value="decigram">Decigram</option><option value = "centigram">Centigram</option><option value = "milligram">Milligram(mg)</option><option value = "hectogram">Hectogram</option><option value="microgram">Microgram</option>';
-                    break;
-                case 'length':
-                    HTML = '<option value="kilometer" selected>Kilometer(km)</option><option value="meter">Meter(m)</option><option value="decimeter">Decimeter(dm)</option><option value = "centimeter">Centimeter(cm)</option><option value = "millimeter">Millimeter(mm)</option><option value = "micrometer">Micrometer</option><option value="nanometer">Nanometer</option>';
-                    break;
-            };
-            document.getElementById(DOMString.u1).innerHTML = '';
-            document.getElementById(DOMString.u2).innerHTML = '';
-            document.getElementById(DOMString.u1).insertAdjacentHTML('afterbegin',HTML);
-            document.getElementById(DOMString.u2).insertAdjacentHTML('afterbegin',HTML);
+        populate: function() {
+            var l1,l2,l3, optionArray;
+            l1 = document.getElementById(DOMString.unitType);
+            l2 = document.getElementById(DOMString.u1);
+            l3 = document.getElementById(DOMString.u2);
+            l2.innerHTML = "";
+            l3.innerHTML = "";
+            if(l1.value === 'length') {
+                optionArray = ['kilometer|Kilometer','nanometer|Nanometer','micrometer|Micrometer','millimeter|Millimeter','centimeter|Centimeter','decimeter|Decimeter','meter|Meter'];
+            } else if(l1.value === 'weight') {
+                optionArray = ['kilogram|Kilogram','gram|Gram','decigram|Decigram','decagram|Decagram','centigram|Centigram','milligram|Milligram','hectogram|Hectogram','microgram|Microgram'];
+            }
+            optionArray.forEach(function(cur) {
+                var pair = cur.split('|');
+                var newOption = document.createElement('option');
+                newOption.value = pair[0];
+                newOption.innerHTML = pair[1];
+                l2.options.add(newOption);
+            });
+            optionArray.forEach(function(cur) {
+                var pair = cur.split('|');
+                var newOption = document.createElement('option');
+                newOption.value = pair[0];
+                newOption.innerHTML = pair[1];
+                l3.options.add(newOption);
+            });
         }
     };
 })();
@@ -139,16 +151,6 @@ var controller = (function(unitCtrl, UICtrl) {
             }
         });
         document.querySelector(DOM.swapBtn).addEventListener('click', swap);
-
-        //Event Listner to update Unit-type List
-        options = document.querySelectorAll('#' + DOM.unitType + '  option');
-        options = Array.prototype.slice.call(options);
-        options.forEach(element => {
-                element.addEventListener('click', (e) => {
-                    console.log(e);
-                    UICtrl.unitTypeList(e.target.value);
-                });
-        });
     };
     return {
         init: function() {
