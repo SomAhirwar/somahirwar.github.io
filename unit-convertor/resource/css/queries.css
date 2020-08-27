@@ -1,0 +1,18 @@
+/*Small to large phones: 481px <= width <= 767px */
+@media only screen and (max-width: 767px) {
+    .outerbox { width: 90%; }
+    .interchange {
+        height: 60px;
+        width: 60px;
+        top: 295px;
+        vertical-align: middle;
+        font-size: 50px;
+        padding: 5px 0 0 0;
+    }
+
+}
+
+/*Small phones: 0<= widthh <=480px */
+@media only screen and (max-width: 480px) {
+
+}

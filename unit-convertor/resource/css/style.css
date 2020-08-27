@@ -16,10 +16,15 @@ html,body {
 }
 
 h1 {
-    padding-top: 30px;
-    font-size: 45px;
-    color: rgb(255, 0, 0);
-    font-weight: 600;
+    padding: 10px;
+    font-size: 50px;
+    color: #1176a8;
+    font-family: cursive;
+    background:linear-gradient(270deg,#d1d0d0d8,#dadadacb);
+    /*text-decoration: underline;*/
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px #00344e;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.596);
 }
 
 h2 {
@@ -41,9 +46,13 @@ h2 {
 .outerbox {
     width: 60%;
     background-color: rgba(0,0,0,0.6);
-    margin: 40px auto 0 auto;
+    margin: 30px auto 0 auto;
     padding: 10px;
     text-align: center;
+    /*box-shadow: 2px 2px 2px black;
+    border-top:2px solid rgba(0, 0, 0);*/
+    
+    border:2px solid rgba(0, 0, 0, 0.555);
 }
 
 .box {
@@ -88,8 +97,8 @@ input {
     font-size: 22px;
     font-weight: 100;
     border-radius: 35px;
-    background-color: rgb(255, 136, 0);
-    border-color: rgb(255, 136, 0);
+    background-color: #005884;
+    border-color: rgb(90, 90, 90);
     transition: background-color 0.2s, border 0.2s, color 0.2s;
     padding: 2px;
     color: white;
@@ -97,9 +106,9 @@ input {
 
 .convert:active,
 .convert:hover {
-    background-color: rgb(255, 208, 0);
-    border-color: rgb(255, 208, 0);
-    color: black;
+    background-color: #005884;
+    border-color: rgb(63, 63, 63);
+    color: rgb(20, 20, 20);
     cursor: pointer;
 }
 
@@ -114,7 +123,7 @@ input {
     text-align: center;
     font-size: 60px;
     font-weight: 600;
-    background-color: purple;
+    background-color: #337799;
     color: white;
     transition: background-color 0.2s, color 0.2s;
     border-radius: 50%;
@@ -122,8 +131,8 @@ input {
 }
 
 .interchange:hover,
-.interchange:active {
-    background-color: rgb(209, 83, 209);
+.interchange:active{
+    background-color: #4593b9;
     color: rgb(0, 0, 0);
     cursor: pointer;
 }
