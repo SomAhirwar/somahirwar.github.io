@@ -4,15 +4,37 @@
     .interchange {
         height: 60px;
         width: 60px;
-        top: 295px;
+        top: 320px;
         vertical-align: middle;
         font-size: 50px;
         padding: 5px 0 0 0;
+    }
+    input {
+        width:95%;
+    }
+
+    .outerbox{
+        margin-top: 10px;;
     }
 
 }
 
 /*Small phones: 0<= widthh <=480px */
 @media only screen and (max-width: 480px) {
+    .outerbox { width: 90%; }
+    .interchange {
+        height: 60px;
+        width: 60px;
+        top: 325px;
+        vertical-align: middle;
+        font-size: 50px;
+        padding: 5px 0 0 0;
+    }
+    input {
+        width:95%;
+    }
 
+    .outerbox{
+        margin-top: 10px;;
+    }
 }
