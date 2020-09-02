@@ -22,7 +22,7 @@ var unit = {
 var unitController = (function() {
     return {
         convertUnit: function(unitType,u1, u2, value1) {
-            console.log(unitType);
+            //console.log(unitType);
             return (unit[unitType][u1]/unit[unitType][u2]) * value1;
         }
     };
@@ -60,7 +60,7 @@ var UIController = (function() {
         },
         updateUnitRelation: function(uType, u1,u2, selector) {
             var relation = unit[uType][u2]/unit[uType][u1];
-            console.log(unit);
+            //console.log(unit);
             document.querySelector(selector).textContent = '1 ' + u1 + ' = ' + relation + ' ' + u2;
         },
         populate: function() {
@@ -89,6 +89,10 @@ var UIController = (function() {
                 newOption.innerHTML = pair[1];
                 l3.options.add(newOption);
             });
+        },
+        clearInput: function() {
+            document.getElementById(DOMString.value1).value = '';
+            document.getElementById(DOMString.value2).value = '';
         }
     };
 })();
@@ -112,6 +116,8 @@ var controller = (function(unitCtrl, UICtrl) {
             UICtrl.updateUnitRelation(input.uType, input.u1, input.u2, DOM.unitRealtionOneToTwo);
             UICtrl.updateUnitRelation(input.uType, input.u2, input.u1, DOM.unitRealtionTwotoOne);
 
+        }else {
+            UICtrl.clearInput();
         }
     }
 
@@ -151,6 +157,8 @@ var controller = (function(unitCtrl, UICtrl) {
             }
         });
         document.querySelector(DOM.swapBtn).addEventListener('click', swap);
+
+        document.getElementById(DOM.value1).addEventListener('input',convert)
     };
     return {
         init: function() {
