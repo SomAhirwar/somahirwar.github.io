@@ -1,73 +1,170 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html,
 body {
-    height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/background.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    font-family: 'Lato', sans-serif;
-    font-size: 20px;
-}
-
-h1 {
-    color: whitesmoke;
-    text-shadow: 2px 2px 2px black;
-    font-size: 2.5em;
-    font-weight: 400;
-    width: 80%;
-}
-
-h1::after {
-    padding-top: 5px;
-    display: block;
-    content: " ";
-    border-bottom:1px solid rgb(155, 155, 155);
+    --black: #2d2926;
+    --red: #E94B3CFF;
+    background-color: var(--black);
+    overflow-x: hidden;
+    font-size: 18px;
 }
 
 .container {
-    width: 85%;
+    width: 80%; 
     margin: 0 auto;
 }
 
-a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-size: 2em;
-}
-
-.box {
-    display: inline-block;
+h2{
     text-align: center;
-    width: 30%;
-    height: 200px;
-    line-height: 200px;
-    vertical-align: middle;
-    margin:20px 1.66% 0 1.66%;
-    text-shadow: 1px 1px 1px #000000;
 }
 
-.blog,
-.unit-convertor {
+/*************************
+***********Nav************
+*************************/
+
+nav {
+    height: 8vh;
+    color: blanchedalmond;
+}
+nav div {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav span{
+    display: inline-block;
+}
+
+nav img {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    width: 35%;
+    justify-content: space-between;
+}
+
+nav li {
+    display: flex;
+    align-items: center;
+}
+
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+/*-----------------------------
+----------Header---------------
+-----------------------------*/
+header {
+    text-align: center;
+    background-color: var(--red);
+    height: 65vh;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+}
+
+#hero-img {
+    margin-top: 2vh;
+    height: 60vh;
+    width: auto;
+    border-radius: 50%;
+    border: 5px solid var(--black);
+}
+
+/****************************
+*******Section Project*******
+****************************/
+
+section {
+    margin-top: 100px;
+}
+
+.project {
+    display:flex;
+    background-color: #221f1d;
+    width: 60vw;
+    margin: 0 auto;
+    margin-top: 5vh;
+    height: 280px;
+    color: white;
+    transform: translateX(50%);
+    transition: all 0.7s;
+    position: relative;
+}
+
+.project img {
+    width: 90%;
+    height: auto;
+}
+
+.first-half{
+    width: 50%;
+    vertical-align: middle;
+}
+
+.project-img {
+    display: block;
+    height: 90%;
+    width: 90%;
+    margin: 5% 0 0 5%;
+    background-image: url("img/blog.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    text-decoration: underline;
-    color: #3d3d3d;
 }
 
-.blog {
-    background-image: linear-gradient(to left top, rgba(255, 255, 255, 0.6),rgba(71, 71, 71, 0.6)), url(img/blog.jpg);
+.project-2 .project-img{
+    background-image: url("img/unit-convertor.png");
 }
 
-.unit-convertor {
-    background-image: linear-gradient(to left top, rgba(255, 255, 255, 0.6),rgba(71, 71, 71, 0.6)), url(img/unit-convertor.jpg);
+.project-3 .project-img {
+    background-image: url("img/hello-world.png");
 }
 
+.second-half {
+    width: 65%
+}
+
+.project ul{
+    margin-top: 30px;
+    list-style: none;
+    padding-left: 30px;
+}
+
+.techs {
+    color: var(--black);
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.techs span {
+    display: inline-block;
+    text-align: center;
+    background-color: var(--red);
+    margin-left: 10px;
+    width: 120px;
+    height: 35px;
+    line-height: 40px;
+    vertical-align: middle;
+    border-radius: 20px;
+}
+
+
+footer {
+    margin-top: 100px;
+    height:40vh;
+    background-color: var(--red);
+}
