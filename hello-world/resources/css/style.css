@@ -59,8 +59,8 @@ h2:after {
 
 h3{
     font-size: 200%;
+    text-transform: capitalize;
 }
-h3::first-letter{ text-transform: uppercase;}
 
 header {
     height: 70vh;
