@@ -1,0 +1,77 @@
+@media only screen and (max-width: 767px) {
+  .container {
+    width: 85%;
+  }
+
+  nav ul {
+    position: absolute;
+    top: 8vh;
+    left: 0;
+    width: 100vw;
+    height: 40vh;
+
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    background-color: var(--black);
+
+    transform: translateX(100%);
+    transition: all 0.5s;
+  }
+
+  .burger {
+    display: flex;
+  }
+  #hero-img {
+    height: 57vh;
+    width: auto;
+  }
+
+  header {
+    height: 90vh;
+  }
+
+  /*PROJECT SECTION*/
+
+  .project {
+    flex-direction: column;
+    width: 90%;
+    height: 400px;
+  }
+
+  #projects .project {
+    margin: 5vh auto 0 auto;
+  }
+
+  .first-half,
+  .second-half {
+    width: 100%;
+  }
+
+  .first-half {
+    height: 150px;
+  }
+
+  footer .container {
+    display: block;
+    text-align: center;
+  }
+
+  .footer-projects,
+  .contacts {
+    width: 40%;
+    margin: 20px 3.5% 0 3.5%;
+    display: inline-block;
+  }
+
+  .about {
+    width: 100%;
+  }
+
+  .about img {
+    margin: 5px 20px 0 60px;
+  }
+} ;
