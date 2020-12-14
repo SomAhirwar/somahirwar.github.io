@@ -29,9 +29,8 @@ function slideIn(el) {
 function displayDropbox() {
   const dropbox = document.querySelector("nav ul");
 
-  if (dropbox.style.transform === `translateX(100%)`)
-    dropbox.style.transform = `translateX(0)`;
-  else dropbox.style.transform = `translateX(100%)`;
+  if (!dropbox.style.transform) dropbox.style.transform = `translateX(0)`;
+  else dropbox.style.transform = ``;
 }
 
 window.addEventListener("scroll", debounce(slideIn));
